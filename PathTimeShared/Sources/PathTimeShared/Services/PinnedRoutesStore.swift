@@ -1,5 +1,4 @@
 import Foundation
-import Combine
 
 public final class PinnedRoutesStore: ObservableObject {
     public static let shared = PinnedRoutesStore()
@@ -37,13 +36,11 @@ public final class PinnedRoutesStore: ObservableObject {
         guard !contains(route) else { return }
         routes.append(route)
         persist()
-        notifyWidgets()
     }
 
     public func remove(_ route: PinnedRoute) {
         routes.removeAll { $0 == route }
         persist()
-        notifyWidgets()
     }
 
     public func toggle(_ route: PinnedRoute) {
@@ -53,24 +50,14 @@ public final class PinnedRoutesStore: ObservableObject {
     public func move(from source: IndexSet, to destination: Int) {
         routes.move(fromOffsets: source, toOffset: destination)
         persist()
-        notifyWidgets()
     }
 
     public func delete(at offsets: IndexSet) {
         routes.remove(atOffsets: offsets)
         persist()
-        notifyWidgets()
     }
 
     public func contains(_ route: PinnedRoute) -> Bool {
         routes.contains(where: { $0 == route })
-    }
-
-    // MARK: - Widget reload
-
-    private func notifyWidgets() {
-#if canImport(WidgetKit)
-        WidgetCenter.shared.reloadAllTimelines()
-#endif
     }
 }

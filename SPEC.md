@@ -44,7 +44,7 @@
 | Large (4×4)：完整发车板 | ✅ |
 | Lock Screen（锁屏组件） | ✅ |
 | AppIntent 可配置显示哪条路线 | ✅ |
-| Widget 倒计时精度（系统级自动秒更新） | ❌ 当前为静态字符串，10分钟刷新一次 |
+| Widget 倒计时精度（系统级自动秒更新） | ✅ `Text(arrivalDate, style: .timer/.relative)` |
 
 ### 4. Apple Watch App
 
@@ -72,7 +72,7 @@
 
 | 项目 | 优先级 | 说明 |
 |------|--------|------|
-| Widget 倒计时精度 | 高 | 改用 `Text(date, style: .timer)` 让系统每秒自动更新，无需频繁刷新 Timeline |
+| ~~Widget 倒计时精度~~ | ~~高~~ | ✅ 已完成 |
 | Watch Complication 可选路线 | 中 | 用 AppIntent 让用户选择表盘显示哪条路线 |
 | App Icon | 中 | 目前使用默认图标 |
 | Watch 端独立管理 Pin | 低 | 直接在 Watch 上 Pin / 取消 Pin |

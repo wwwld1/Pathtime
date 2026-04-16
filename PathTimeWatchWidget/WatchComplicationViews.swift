@@ -33,7 +33,7 @@ struct WatchComplicationEntryView: View {
             }
         }
         .widgetLabel {
-            Text(entry.nextArrival.map { $0.displayTime() } ?? "--")
+            Text(entry.nextArrival.map { $0.arrivalDate } ?? .distantFuture, style: .timer)
                 .font(.system(.body, design: .rounded, weight: .bold))
         }
     }
@@ -47,7 +47,7 @@ struct WatchComplicationEntryView: View {
             if let arrival = entry.nextArrival {
                 HStack(spacing: 2) {
                     Circle().fill(arrival.lineColor).frame(width: 6, height: 6)
-                    Text(arrival.displayTime())
+                    Text(arrival.arrivalDate, style: .timer)
                         .font(.system(size: 15, weight: .bold, design: .rounded))
                         .monospacedDigit()
                 }
@@ -78,7 +78,7 @@ struct WatchComplicationEntryView: View {
         if let arrival {
             HStack(spacing: 3) {
                 Circle().fill(arrival.lineColor).frame(width: 7, height: 7)
-                Text(arrival.displayTime())
+                Text(arrival.arrivalDate, style: .timer)
                     .font(.system(
                         size: emphasis ? 15 : 13,
                         weight: emphasis ? .bold : .medium,

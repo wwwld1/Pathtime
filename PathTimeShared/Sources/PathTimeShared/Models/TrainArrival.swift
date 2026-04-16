@@ -29,6 +29,12 @@ public struct TrainArrival: Identifiable, Hashable, Sendable {
         Color(hex: lineColorHex) ?? .gray
     }
 
+    /// The absolute Date when this train is expected to arrive.
+    /// Use this with Text(arrivalDate, style: .timer/.relative) for live countdowns.
+    public var arrivalDate: Date {
+        fetchedAt.addingTimeInterval(TimeInterval(secondsToArrival))
+    }
+
     /// Remaining seconds accounting for elapsed time since fetch
     public func remainingSeconds(at now: Date = .now) -> Int {
         let elapsed = Int(now.timeIntervalSince(fetchedAt))

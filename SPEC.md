@@ -53,7 +53,7 @@
 | 收藏路线列表（显示下两班） | ✅ |
 | 60 秒自动轮询 API | ✅ |
 | 从 iPhone 同步 Pin（App Groups） | ✅ |
-| Watch 端独立管理 Pin（增删） | ❌ 只能查看，需在 iPhone 操作 |
+| Watch 端独立管理 Pin（增删） | ✅ 列表滑动删除；列表底部入口 → 选站台 → 选方向 → 添加 |
 
 ### 5. Watch Complication（表盘）
 
@@ -75,7 +75,7 @@
 | ~~Widget 倒计时精度~~ | ~~高~~ | ✅ 已完成 |
 | Watch Complication 可选路线 | 中 | 用 AppIntent 让用户选择表盘显示哪条路线 |
 | App Icon | 中 | 目前使用默认图标 |
-| Watch 端独立管理 Pin | 低 | 直接在 Watch 上 Pin / 取消 Pin |
+| ~~Watch 端独立管理 Pin~~ | ~~低~~ | ✅ 已完成 |
 | Background App Refresh | 低 | 后台定期预热数据，打开 App 时更快显示 |
 
 ---

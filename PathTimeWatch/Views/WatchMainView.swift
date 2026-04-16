@@ -4,34 +4,37 @@ import PathTimeShared
 struct WatchMainView: View {
     @EnvironmentObject private var arrivalsStore: ArrivalsStore
     @EnvironmentObject private var pinnedStore: PinnedRoutesStore
+    @State private var showAddPin = false
 
     var body: some View {
         NavigationStack {
-            if pinnedStore.routes.isEmpty {
-                VStack(spacing: 8) {
-                    Image(systemName: "star.slash")
-                        .font(.title2)
-                    Text("在 iPhone 上收藏路线")
-                        .font(.caption)
-                        .multilineTextAlignment(.center)
-                }
-                .foregroundStyle(.secondary)
-            } else {
-                List(pinnedStore.routes) { route in
+            List {
+                ForEach(pinnedStore.routes) { route in
                     WatchRouteRow(route: route)
                 }
-                .navigationTitle("PATH")
+                .onDelete(perform: pinnedStore.delete)
+
+                // 新增 Pin 入口（列表底部）
+                NavigationLink {
+                    WatchStationPickerView()
+                } label: {
+                    Label("添加路线", systemImage: "plus.circle.fill")
+                        .foregroundStyle(.green)
+                        .font(.caption)
+                }
             }
-        }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                if arrivalsStore.isLoading {
-                    ProgressView()
+            .navigationTitle("PATH")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    if arrivalsStore.isLoading { ProgressView() }
                 }
             }
         }
+        .refreshable { await arrivalsStore.fetch() }
     }
 }
+
+// MARK: - Route row
 
 struct WatchRouteRow: View {
     let route: PinnedRoute
@@ -48,7 +51,7 @@ struct WatchRouteRow: View {
             if let first = arrivals.first {
                 HStack(spacing: 4) {
                     Circle().fill(first.lineColor).frame(width: 8, height: 8)
-                    Text(first.displayTime())
+                    Text(first.arrivalDate, style: .timer)
                         .font(.title3).fontWeight(.bold).monospacedDigit()
                 }
             }
@@ -56,7 +59,7 @@ struct WatchRouteRow: View {
             if let second = arrivals.dropFirst().first {
                 HStack(spacing: 4) {
                     Circle().fill(second.lineColor).frame(width: 6, height: 6)
-                    Text(second.displayTime())
+                    Text(second.arrivalDate, style: .relative)
                         .font(.caption).fontWeight(.medium).monospacedDigit()
                         .foregroundStyle(.secondary)
                 }

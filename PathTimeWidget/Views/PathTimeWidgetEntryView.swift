@@ -73,7 +73,6 @@ struct SmallWidgetView: View {
             if let first = entry.arrivals.first {
                 HStack(spacing: 5) {
                     Circle().fill(first.lineColor).frame(width: 10, height: 10)
-                    // .timer shows "2:47" counting down — updates every second automatically
                     Text(first.arrivalDate, style: .timer)
                         .font(.title).fontWeight(.bold).monospacedDigit()
                 }
@@ -91,6 +90,14 @@ struct SmallWidgetView: View {
             }
 
             Spacer(minLength: 0)
+
+            // 数据新鲜度提示
+            HStack(spacing: 2) {
+                Image(systemName: "clock").font(.system(size: 9))
+                Text(entry.fetchedAt, style: .relative)
+                    .font(.system(size: 9))
+            }
+            .foregroundStyle(.tertiary)
         }
         .padding(12)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -125,6 +132,13 @@ struct MediumWidgetView: View {
                 }
             }
             Spacer(minLength: 0)
+            if !title.isEmpty {
+                HStack(spacing: 2) {
+                    Image(systemName: "clock").font(.system(size: 9))
+                    Text(entry.fetchedAt, style: .relative).font(.system(size: 9))
+                }
+                .foregroundStyle(.tertiary)
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
@@ -140,7 +154,11 @@ struct LargeWidgetView: View {
             HStack {
                 Text(entry.route?.fullTitle ?? "PATH 到站时间").font(.headline)
                 Spacer()
-                Text(entry.fetchedAt, style: .time).font(.caption2).foregroundStyle(.tertiary)
+                HStack(spacing: 3) {
+                    Image(systemName: "clock").font(.caption2)
+                    Text(entry.fetchedAt, style: .relative).font(.caption2)
+                }
+                .foregroundStyle(.tertiary)
             }
 
             Divider()

@@ -79,6 +79,9 @@ targets:
       - path: PathTimeWatch
     dependencies:
       - package: PathTimeShared
+      - target: PathTimeWatchWidget
+        embed: true
+        codeSign: false
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.pathtime.app.watchkitapp
@@ -87,6 +90,29 @@ targets:
         INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.pathtime.app
     entitlements:
       path: PathTimeWatch/PathTimeWatch.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.pathtime.shared
+
+  # ── Watch Widget Extension (Complications) ──────────────────────────────────
+  PathTimeWatchWidget:
+    type: app-extension
+    platform: watchOS
+    sources:
+      - path: PathTimeWatchWidget
+    dependencies:
+      - package: PathTimeShared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pathtime.app.watchkitapp.complication
+        GENERATE_INFOPLIST_FILE: YES
+    info:
+      path: PathTimeWatchWidget/Info.plist
+      properties:
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: PathTimeWatchWidget/PathTimeWatchWidget.entitlements
       properties:
         com.apple.security.application-groups:
           - group.com.pathtime.shared

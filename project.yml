@@ -87,7 +87,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.pathtime.app.watchkitapp
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_WKApplication: YES
-        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.pathtime.app
+        INFOPLIST_KEY_WKCompanionAppBundleIdentifier: com.leowang.pathtime.app
     entitlements:
       path: PathTimeWatch/PathTimeWatch.entitlements
       properties:

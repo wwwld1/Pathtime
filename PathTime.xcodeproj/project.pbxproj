@@ -96,16 +96,16 @@
 /* Begin PBXFileReference section */
 		034CF1044717BD7C7184033C /* WatchComplicationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchComplicationViews.swift; sourceTree = "<group>"; };
 		05180A357DBA3E7CC82A169C /* PathTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathTime.entitlements; sourceTree = "<group>"; };
-		100FFF12CB72E1DAC618658A /* PathTimeWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PathTimeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		100FFF12CB72E1DAC618658A /* PathTimeWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PathTimeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		124A287B49D7B7F3AD0EA255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		33C76BE13E7325654A304BA0 /* PathTime.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PathTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C76BE13E7325654A304BA0 /* PathTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AECB45FA57EDFA6EF8D97D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		48EE9DD86EA1F0503BD44053 /* WatchConnectivityReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityReceiver.swift; sourceTree = "<group>"; };
 		4A04C3FC7F52B097BE25B1A5 /* WatchAddPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAddPinView.swift; sourceTree = "<group>"; };
 		73989E026A7B6AE9F748E778 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
 		7AE1AF6B34B2B783D9ABE800 /* PinnedRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedRoutesView.swift; sourceTree = "<group>"; };
 		840F0C734BB0A202EC6B495A /* PathTimeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathTimeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		89EE3ED5BBAA271DCEAD3F2C /* PathTimeShared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PathTimeShared; path = PathTimeShared; sourceTree = SOURCE_ROOT; };
+		89EE3ED5BBAA271DCEAD3F2C /* PathTimeShared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PathTimeShared; sourceTree = SOURCE_ROOT; };
 		8E3FF842EBE4B01000F7AFAD /* PathTimeWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathTimeWidget.entitlements; sourceTree = "<group>"; };
 		9502A5D5122B7470B7062A67 /* PathTimeWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathTimeWatch.entitlements; sourceTree = "<group>"; };
 		A4E9F665508E4CAD8F6EF384 /* PathTimeWatchWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathTimeWatchWidget.entitlements; sourceTree = "<group>"; };
@@ -359,20 +359,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
-				TargetAttributes = {
-					554DABE77B86863A19AFD4CE = {
-						DevelopmentTeam = "";
-					};
-					B033B18BECD610AC9ACDB341 = {
-						DevelopmentTeam = "";
-					};
-					DFB0714B1193F641DC230975 = {
-						DevelopmentTeam = "";
-					};
-					F6CDD95FD12F5B18D34D12A2 = {
-						DevelopmentTeam = "";
-					};
-				};
 			};
 			buildConfigurationList = B6835265363F9BAEA6EC3A84 /* Build configuration list for PBXProject "PathTime" */;
 			developmentRegion = en;
@@ -471,10 +457,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PathTimeWatch/PathTimeWatch.entitlements;
+				DEVELOPMENT_TEAM = ZC95HZDG9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_WKApplication = YES;
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.pathtime.app;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.watchkitapp;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leowang.pathtime.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leowang.pathtime.app.watchkitapp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -545,10 +532,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PathTimeWatch/PathTimeWatch.entitlements;
+				DEVELOPMENT_TEAM = ZC95HZDG9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_WKApplication = YES;
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.pathtime.app;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.watchkitapp;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leowang.pathtime.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leowang.pathtime.app.watchkitapp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -559,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PathTimeWidget/PathTimeWidget.entitlements;
+				DEVELOPMENT_TEAM = ZC95HZDG9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PathTimeWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -566,7 +555,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leowang.pathtime.app.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -576,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PathTimeWatchWidget/PathTimeWatchWidget.entitlements;
+				DEVELOPMENT_TEAM = ZC95HZDG9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PathTimeWatchWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,7 +573,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.watchkitapp.complication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leowang.pathtime.app.watchkitapp.wwidget;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -596,6 +586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PathTime/PathTime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZC95HZDG9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -604,7 +595,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leowang.pathtime.app;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -614,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PathTimeWidget/PathTimeWidget.entitlements;
+				DEVELOPMENT_TEAM = ZC95HZDG9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PathTimeWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -621,7 +613,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leowang.pathtime.app.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -697,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PathTimeWatchWidget/PathTimeWatchWidget.entitlements;
+				DEVELOPMENT_TEAM = ZC95HZDG9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PathTimeWatchWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -704,7 +697,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.watchkitapp.complication;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leowang.pathtime.app.watchkitapp.wwidget;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -717,6 +710,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PathTime/PathTime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZC95HZDG9Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -725,7 +719,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leowang.pathtime.app;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

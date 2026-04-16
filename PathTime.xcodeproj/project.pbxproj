@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		072C8C2FD139AB3FA8B9FAEA /* PathTimeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 840F0C734BB0A202EC6B495A /* PathTimeWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0C0A62500E33D09359D2335D /* PinnedRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE1AF6B34B2B783D9ABE800 /* PinnedRoutesView.swift */; };
+		17BEFB6F81AB5D2850F5493A /* PathTimeShared in Frameworks */ = {isa = PBXBuildFile; productRef = 561E63D2893E51349801EB0E /* PathTimeShared */; };
+		21490A6185BD0D928FCA5262 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB45FA57EDFA6EF8D97D4 /* ContentView.swift */; };
+		254A376F3E86B2A36968A473 /* StationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4651BB2695929A050013CE /* StationsListView.swift */; };
+		4C14CB58E9F0B91833D6D358 /* PathTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E07B77565CA2DDA043EFB /* PathTimeApp.swift */; };
+		5CA732336EFF4E7200CFD2A2 /* PathTimeShared in Frameworks */ = {isa = PBXBuildFile; productRef = 82F3E66DA06922556DE5BECB /* PathTimeShared */; };
+		6001883A1E98041DD0FAD18B /* PathTimeWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 100FFF12CB72E1DAC618658A /* PathTimeWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		63C80C4448BC892EB732D011 /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB32FB1E80C6018C69A2808 /* WatchMainView.swift */; };
+		650072ED29D5A6AF1A72D65C /* StationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88D41E1F50A46A5B6028A3 /* StationDetailView.swift */; };
+		A7C75ECF021F714292C830CC /* PathTimeShared in Frameworks */ = {isa = PBXBuildFile; productRef = A2ECCFD8705C5BEDEE60CC96 /* PathTimeShared */; };
+		AAC475F13E305953C5CA20D7 /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7611A6E15D013D3B03E200 /* TimelineProvider.swift */; };
+		B45744CA0FC3B7E120C98213 /* PathTimeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717E0E059564FC669D94A1C /* PathTimeWatchApp.swift */; };
+		C59699290F26464D53088D0E /* PathTimeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95655224E74310DA921536E /* PathTimeWidget.swift */; };
+		D989128A8E4527E4B20340B1 /* PathTimeWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D66D3A0B7B6E54E77501E /* PathTimeWidgetEntryView.swift */; };
+		E819FADC75C9C65912111B2A /* WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB45464C51FC8B72E1F28D3 /* WidgetIntent.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47C188F8EA2DC6839CCC2810 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C9504EB2938FE911383897A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B033B18BECD610AC9ACDB341;
+			remoteInfo = PathTimeWatch;
+		};
+		EA97C42506D86485B6D60235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C9504EB2938FE911383897A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554DABE77B86863A19AFD4CE;
+			remoteInfo = PathTimeWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B980DB2F8A8F8B360F3989E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				072C8C2FD139AB3FA8B9FAEA /* PathTimeWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F82B78DFC974CC7614D204D9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6001883A1E98041DD0FAD18B /* PathTimeWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05180A357DBA3E7CC82A169C /* PathTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathTime.entitlements; sourceTree = "<group>"; };
+		100FFF12CB72E1DAC618658A /* PathTimeWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PathTimeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C76BE13E7325654A304BA0 /* PathTime.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PathTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AECB45FA57EDFA6EF8D97D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7AE1AF6B34B2B783D9ABE800 /* PinnedRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedRoutesView.swift; sourceTree = "<group>"; };
+		840F0C734BB0A202EC6B495A /* PathTimeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathTimeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89EE3ED5BBAA271DCEAD3F2C /* PathTimeShared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PathTimeShared; path = PathTimeShared; sourceTree = SOURCE_ROOT; };
+		8E3FF842EBE4B01000F7AFAD /* PathTimeWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathTimeWidget.entitlements; sourceTree = "<group>"; };
+		9502A5D5122B7470B7062A67 /* PathTimeWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathTimeWatch.entitlements; sourceTree = "<group>"; };
+		ADB45464C51FC8B72E1F28D3 /* WidgetIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetIntent.swift; sourceTree = "<group>"; };
+		BA4E07B77565CA2DDA043EFB /* PathTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathTimeApp.swift; sourceTree = "<group>"; };
+		BFB32FB1E80C6018C69A2808 /* WatchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMainView.swift; sourceTree = "<group>"; };
+		DF7611A6E15D013D3B03E200 /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
+		E1EEF9DC31C662FCB22137E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E717E0E059564FC669D94A1C /* PathTimeWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathTimeWatchApp.swift; sourceTree = "<group>"; };
+		EB4651BB2695929A050013CE /* StationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListView.swift; sourceTree = "<group>"; };
+		EF88D41E1F50A46A5B6028A3 /* StationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailView.swift; sourceTree = "<group>"; };
+		F95655224E74310DA921536E /* PathTimeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathTimeWidget.swift; sourceTree = "<group>"; };
+		FD2D66D3A0B7B6E54E77501E /* PathTimeWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathTimeWidgetEntryView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69BD4E49EF5D116F09A681DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7C75ECF021F714292C830CC /* PathTimeShared in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D01C55402809D0E1A5B6D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CA732336EFF4E7200CFD2A2 /* PathTimeShared in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888E735D36A0D93370AF140B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BEFB6F81AB5D2850F5493A /* PathTimeShared in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00D7332B89020E9B99022295 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AECB45FA57EDFA6EF8D97D4 /* ContentView.swift */,
+				7AE1AF6B34B2B783D9ABE800 /* PinnedRoutesView.swift */,
+				EF88D41E1F50A46A5B6028A3 /* StationDetailView.swift */,
+				EB4651BB2695929A050013CE /* StationsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0292B97827AA59F33B042AA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFB32FB1E80C6018C69A2808 /* WatchMainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2020FB06A5639C40C76B2F02 /* PathTimeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E1EEF9DC31C662FCB22137E2 /* Info.plist */,
+				8E3FF842EBE4B01000F7AFAD /* PathTimeWidget.entitlements */,
+				F95655224E74310DA921536E /* PathTimeWidget.swift */,
+				DF7611A6E15D013D3B03E200 /* TimelineProvider.swift */,
+				ADB45464C51FC8B72E1F28D3 /* WidgetIntent.swift */,
+				CDC2C5333D8320CF7750AADF /* Views */,
+			);
+			path = PathTimeWidget;
+			sourceTree = "<group>";
+		};
+		6AE519BA0E4C90C970B6AAAB /* PathTimeWatch */ = {
+			isa = PBXGroup;
+			children = (
+				9502A5D5122B7470B7062A67 /* PathTimeWatch.entitlements */,
+				E717E0E059564FC669D94A1C /* PathTimeWatchApp.swift */,
+				0292B97827AA59F33B042AA7 /* Views */,
+			);
+			path = PathTimeWatch;
+			sourceTree = "<group>";
+		};
+		8B1C9533FB305AC958852F97 /* PathTime */ = {
+			isa = PBXGroup;
+			children = (
+				05180A357DBA3E7CC82A169C /* PathTime.entitlements */,
+				BA4E07B77565CA2DDA043EFB /* PathTimeApp.swift */,
+				00D7332B89020E9B99022295 /* Views */,
+			);
+			path = PathTime;
+			sourceTree = "<group>";
+		};
+		9CE32644E486CADB154191D5 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				89EE3ED5BBAA271DCEAD3F2C /* PathTimeShared */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		A139597CD181F09F6A8B02DD = {
+			isa = PBXGroup;
+			children = (
+				9CE32644E486CADB154191D5 /* Packages */,
+				8B1C9533FB305AC958852F97 /* PathTime */,
+				6AE519BA0E4C90C970B6AAAB /* PathTimeWatch */,
+				2020FB06A5639C40C76B2F02 /* PathTimeWidget */,
+				E7C1AB8CE9EFEAD32B3447E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDC2C5333D8320CF7750AADF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD2D66D3A0B7B6E54E77501E /* PathTimeWidgetEntryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E7C1AB8CE9EFEAD32B3447E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33C76BE13E7325654A304BA0 /* PathTime.app */,
+				840F0C734BB0A202EC6B495A /* PathTimeWatch.app */,
+				100FFF12CB72E1DAC618658A /* PathTimeWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		554DABE77B86863A19AFD4CE /* PathTimeWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E4C5924CF0042BA903BE722 /* Build configuration list for PBXNativeTarget "PathTimeWidget" */;
+			buildPhases = (
+				BCFFE1AFC85F5CD85D08EC23 /* Sources */,
+				888E735D36A0D93370AF140B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PathTimeWidget;
+			packageProductDependencies = (
+				561E63D2893E51349801EB0E /* PathTimeShared */,
+			);
+			productName = PathTimeWidget;
+			productReference = 100FFF12CB72E1DAC618658A /* PathTimeWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B033B18BECD610AC9ACDB341 /* PathTimeWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16E2C30FFF82C68663714D01 /* Build configuration list for PBXNativeTarget "PathTimeWatch" */;
+			buildPhases = (
+				021286FF6982793A7CF06F66 /* Sources */,
+				69BD4E49EF5D116F09A681DF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PathTimeWatch;
+			packageProductDependencies = (
+				A2ECCFD8705C5BEDEE60CC96 /* PathTimeShared */,
+			);
+			productName = PathTimeWatch;
+			productReference = 840F0C734BB0A202EC6B495A /* PathTimeWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6CDD95FD12F5B18D34D12A2 /* PathTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A475085F865D8F7B325A3EC3 /* Build configuration list for PBXNativeTarget "PathTime" */;
+			buildPhases = (
+				4A7A826786682EFAA796210E /* Sources */,
+				80D01C55402809D0E1A5B6D4 /* Frameworks */,
+				F82B78DFC974CC7614D204D9 /* Embed Foundation Extensions */,
+				1B980DB2F8A8F8B360F3989E /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6395729ACFAD22F3B3AE766 /* PBXTargetDependency */,
+				C4A005136F173EB3458F93CA /* PBXTargetDependency */,
+			);
+			name = PathTime;
+			packageProductDependencies = (
+				82F3E66DA06922556DE5BECB /* PathTimeShared */,
+			);
+			productName = PathTime;
+			productReference = 33C76BE13E7325654A304BA0 /* PathTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C9504EB2938FE911383897A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					554DABE77B86863A19AFD4CE = {
+						DevelopmentTeam = "";
+					};
+					B033B18BECD610AC9ACDB341 = {
+						DevelopmentTeam = "";
+					};
+					F6CDD95FD12F5B18D34D12A2 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = B6835265363F9BAEA6EC3A84 /* Build configuration list for PBXProject "PathTime" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = A139597CD181F09F6A8B02DD;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				242D3F2C90CF97BB9E5F1EC1 /* XCLocalSwiftPackageReference "PathTimeShared" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E7C1AB8CE9EFEAD32B3447E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6CDD95FD12F5B18D34D12A2 /* PathTime */,
+				B033B18BECD610AC9ACDB341 /* PathTimeWatch */,
+				554DABE77B86863A19AFD4CE /* PathTimeWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		021286FF6982793A7CF06F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45744CA0FC3B7E120C98213 /* PathTimeWatchApp.swift in Sources */,
+				63C80C4448BC892EB732D011 /* WatchMainView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A7A826786682EFAA796210E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21490A6185BD0D928FCA5262 /* ContentView.swift in Sources */,
+				4C14CB58E9F0B91833D6D358 /* PathTimeApp.swift in Sources */,
+				0C0A62500E33D09359D2335D /* PinnedRoutesView.swift in Sources */,
+				650072ED29D5A6AF1A72D65C /* StationDetailView.swift in Sources */,
+				254A376F3E86B2A36968A473 /* StationsListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCFFE1AFC85F5CD85D08EC23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59699290F26464D53088D0E /* PathTimeWidget.swift in Sources */,
+				D989128A8E4527E4B20340B1 /* PathTimeWidgetEntryView.swift in Sources */,
+				AAC475F13E305953C5CA20D7 /* TimelineProvider.swift in Sources */,
+				E819FADC75C9C65912111B2A /* WidgetIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4A005136F173EB3458F93CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B033B18BECD610AC9ACDB341 /* PathTimeWatch */;
+			targetProxy = 47C188F8EA2DC6839CCC2810 /* PBXContainerItemProxy */;
+		};
+		D6395729ACFAD22F3B3AE766 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554DABE77B86863A19AFD4CE /* PathTimeWidget */;
+			targetProxy = EA97C42506D86485B6D60235 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		038D3FBFE5470E2C2CA6CB72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PathTimeWatch/PathTimeWatch.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.pathtime.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		289BA4F183FCDAD21F4B6C16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		331538599C09FE798BDF48B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PathTimeWatch/PathTimeWatch.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.pathtime.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		5893188D5E7ABA71EC3CB158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PathTimeWidget/PathTimeWidget.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PathTimeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9986F88452514E014EB61B6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PathTime/PathTime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9E04FA3AE45832E8082890E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PathTimeWidget/PathTimeWidget.entitlements;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PathTimeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE210AEC04BE6885698B963D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		FE579A51006E1013CFB30E32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PathTime/PathTime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pathtime.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16E2C30FFF82C68663714D01 /* Build configuration list for PBXNativeTarget "PathTimeWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				331538599C09FE798BDF48B5 /* Debug */,
+				038D3FBFE5470E2C2CA6CB72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7E4C5924CF0042BA903BE722 /* Build configuration list for PBXNativeTarget "PathTimeWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5893188D5E7ABA71EC3CB158 /* Debug */,
+				9E04FA3AE45832E8082890E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A475085F865D8F7B325A3EC3 /* Build configuration list for PBXNativeTarget "PathTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE579A51006E1013CFB30E32 /* Debug */,
+				9986F88452514E014EB61B6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B6835265363F9BAEA6EC3A84 /* Build configuration list for PBXProject "PathTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE210AEC04BE6885698B963D /* Debug */,
+				289BA4F183FCDAD21F4B6C16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		242D3F2C90CF97BB9E5F1EC1 /* XCLocalSwiftPackageReference "PathTimeShared" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = PathTimeShared;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		561E63D2893E51349801EB0E /* PathTimeShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PathTimeShared;
+		};
+		82F3E66DA06922556DE5BECB /* PathTimeShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PathTimeShared;
+		};
+		A2ECCFD8705C5BEDEE60CC96 /* PathTimeShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PathTimeShared;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5C9504EB2938FE911383897A /* Project object */;
+}

@@ -20,6 +20,7 @@
 		650072ED29D5A6AF1A72D65C /* StationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88D41E1F50A46A5B6028A3 /* StationDetailView.swift */; };
 		7D8D0BA7F4ABD2FC52325940 /* WatchComplicationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034CF1044717BD7C7184033C /* WatchComplicationViews.swift */; };
 		8DC2C19D780DCF55DE4C48FB /* PathTimeWatchWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC12A2F2A5B56D6FCB9CDF92 /* PathTimeWatchWidget.swift */; };
+		94B3A2E0814193EEC5425F89 /* WatchAddPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04C3FC7F52B097BE25B1A5 /* WatchAddPinView.swift */; };
 		A7C75ECF021F714292C830CC /* PathTimeShared in Frameworks */ = {isa = PBXBuildFile; productRef = A2ECCFD8705C5BEDEE60CC96 /* PathTimeShared */; };
 		AAC475F13E305953C5CA20D7 /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7611A6E15D013D3B03E200 /* TimelineProvider.swift */; };
 		B45744CA0FC3B7E120C98213 /* PathTimeWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717E0E059564FC669D94A1C /* PathTimeWatchApp.swift */; };
@@ -97,6 +98,7 @@
 		124A287B49D7B7F3AD0EA255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		33C76BE13E7325654A304BA0 /* PathTime.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PathTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AECB45FA57EDFA6EF8D97D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A04C3FC7F52B097BE25B1A5 /* WatchAddPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAddPinView.swift; sourceTree = "<group>"; };
 		7AE1AF6B34B2B783D9ABE800 /* PinnedRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedRoutesView.swift; sourceTree = "<group>"; };
 		840F0C734BB0A202EC6B495A /* PathTimeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathTimeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EE3ED5BBAA271DCEAD3F2C /* PathTimeShared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PathTimeShared; path = PathTimeShared; sourceTree = SOURCE_ROOT; };
@@ -168,6 +170,7 @@
 		0292B97827AA59F33B042AA7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4A04C3FC7F52B097BE25B1A5 /* WatchAddPinView.swift */,
 				BFB32FB1E80C6018C69A2808 /* WatchMainView.swift */,
 			);
 			path = Views;
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45744CA0FC3B7E120C98213 /* PathTimeWatchApp.swift in Sources */,
+				94B3A2E0814193EEC5425F89 /* WatchAddPinView.swift in Sources */,
 				63C80C4448BC892EB732D011 /* WatchMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

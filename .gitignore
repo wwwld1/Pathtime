@@ -2,6 +2,8 @@
 *.xcodeproj/xcuserdata/
 *.xcworkspace/xcuserdata/
 *.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.xcworkspace/xcuserdata/
+*.xcuserstate
 *.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
 DerivedData/
 *.ipa

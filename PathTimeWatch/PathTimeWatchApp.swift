@@ -6,6 +6,10 @@ struct PathTimeWatchApp: App {
     @StateObject private var arrivalsStore = ArrivalsStore()
     @StateObject private var pinnedStore = PinnedRoutesStore.shared
 
+    init() {
+        _ = WatchConnectivityReceiver.shared  // 激活 WCSession 接收
+    }
+
     var body: some Scene {
         WindowGroup {
             WatchMainView()

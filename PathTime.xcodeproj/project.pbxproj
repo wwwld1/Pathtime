@@ -13,11 +13,13 @@
 		21490A6185BD0D928FCA5262 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB45FA57EDFA6EF8D97D4 /* ContentView.swift */; };
 		254A376F3E86B2A36968A473 /* StationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4651BB2695929A050013CE /* StationsListView.swift */; };
 		28F5CE898A5EF738B3E6D752 /* PathTimeWatchWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F5C65CB8D98C2D9682CAA042 /* PathTimeWatchWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A1F1A6478F95C2B7EE03B62 /* WatchConnectivityReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE9DD86EA1F0503BD44053 /* WatchConnectivityReceiver.swift */; };
 		4C14CB58E9F0B91833D6D358 /* PathTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E07B77565CA2DDA043EFB /* PathTimeApp.swift */; };
 		5CA732336EFF4E7200CFD2A2 /* PathTimeShared in Frameworks */ = {isa = PBXBuildFile; productRef = 82F3E66DA06922556DE5BECB /* PathTimeShared */; };
 		6001883A1E98041DD0FAD18B /* PathTimeWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 100FFF12CB72E1DAC618658A /* PathTimeWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		63C80C4448BC892EB732D011 /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB32FB1E80C6018C69A2808 /* WatchMainView.swift */; };
 		650072ED29D5A6AF1A72D65C /* StationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88D41E1F50A46A5B6028A3 /* StationDetailView.swift */; };
+		7B4EB8A10D64CD8FBDFD2ACF /* WatchSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73989E026A7B6AE9F748E778 /* WatchSyncManager.swift */; };
 		7D8D0BA7F4ABD2FC52325940 /* WatchComplicationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034CF1044717BD7C7184033C /* WatchComplicationViews.swift */; };
 		8DC2C19D780DCF55DE4C48FB /* PathTimeWatchWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC12A2F2A5B56D6FCB9CDF92 /* PathTimeWatchWidget.swift */; };
 		94B3A2E0814193EEC5425F89 /* WatchAddPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A04C3FC7F52B097BE25B1A5 /* WatchAddPinView.swift */; };
@@ -98,7 +100,9 @@
 		124A287B49D7B7F3AD0EA255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		33C76BE13E7325654A304BA0 /* PathTime.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PathTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AECB45FA57EDFA6EF8D97D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		48EE9DD86EA1F0503BD44053 /* WatchConnectivityReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityReceiver.swift; sourceTree = "<group>"; };
 		4A04C3FC7F52B097BE25B1A5 /* WatchAddPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAddPinView.swift; sourceTree = "<group>"; };
+		73989E026A7B6AE9F748E778 /* WatchSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSyncManager.swift; sourceTree = "<group>"; };
 		7AE1AF6B34B2B783D9ABE800 /* PinnedRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedRoutesView.swift; sourceTree = "<group>"; };
 		840F0C734BB0A202EC6B495A /* PathTimeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathTimeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EE3ED5BBAA271DCEAD3F2C /* PathTimeShared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PathTimeShared; path = PathTimeShared; sourceTree = SOURCE_ROOT; };
@@ -194,6 +198,7 @@
 			children = (
 				9502A5D5122B7470B7062A67 /* PathTimeWatch.entitlements */,
 				E717E0E059564FC669D94A1C /* PathTimeWatchApp.swift */,
+				48EE9DD86EA1F0503BD44053 /* WatchConnectivityReceiver.swift */,
 				0292B97827AA59F33B042AA7 /* Views */,
 			);
 			path = PathTimeWatch;
@@ -216,6 +221,7 @@
 			children = (
 				05180A357DBA3E7CC82A169C /* PathTime.entitlements */,
 				BA4E07B77565CA2DDA043EFB /* PathTimeApp.swift */,
+				73989E026A7B6AE9F748E778 /* WatchSyncManager.swift */,
 				00D7332B89020E9B99022295 /* Views */,
 			);
 			path = PathTime;
@@ -400,6 +406,7 @@
 			files = (
 				B45744CA0FC3B7E120C98213 /* PathTimeWatchApp.swift in Sources */,
 				94B3A2E0814193EEC5425F89 /* WatchAddPinView.swift in Sources */,
+				3A1F1A6478F95C2B7EE03B62 /* WatchConnectivityReceiver.swift in Sources */,
 				63C80C4448BC892EB732D011 /* WatchMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +420,7 @@
 				0C0A62500E33D09359D2335D /* PinnedRoutesView.swift in Sources */,
 				650072ED29D5A6AF1A72D65C /* StationDetailView.swift in Sources */,
 				254A376F3E86B2A36968A473 /* StationsListView.swift in Sources */,
+				7B4EB8A10D64CD8FBDFD2ACF /* WatchSyncManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

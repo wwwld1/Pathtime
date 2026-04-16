@@ -60,4 +60,10 @@ public final class PinnedRoutesStore: ObservableObject {
     public func contains(_ route: PinnedRoute) -> Bool {
         routes.contains(where: { $0 == route })
     }
+
+    /// 用于 WatchConnectivity 接收方直接替换全部数据
+    public func replaceAll(with newRoutes: [PinnedRoute]) {
+        routes = newRoutes
+        persist()
+    }
 }

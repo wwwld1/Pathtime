@@ -74,7 +74,7 @@ struct PinnedRouteCard: View {
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                     Spacer()
-                    Text(train.displayTime())
+                    Text(train.arrivalDate, style: .timer)
                         .font(.subheadline)
                         .fontWeight(.bold)
                         .monospacedDigit()

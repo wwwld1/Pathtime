@@ -59,7 +59,7 @@ struct StationDetailView: View {
             }
             HStack(spacing: 12) {
                 ForEach(trains.prefix(3)) { train in
-                    Text(train.displayTime())
+                    Text(train.arrivalDate, style: .timer)
                         .font(.title3)
                         .fontWeight(.bold)
                         .monospacedDigit()

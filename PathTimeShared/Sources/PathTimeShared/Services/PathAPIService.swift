@@ -28,7 +28,12 @@ private struct MessageResult: Decodable {
 
 public final class PathAPIService: Sendable {
     public static let shared = PathAPIService()
-    private init() {}
+
+    let session: URLSession
+
+    public init(session: URLSession = .shared) {
+        self.session = session
+    }
 
     private static let baseURL = "https://www.panynj.gov/bin/portauthority/ridepath.json"
 
@@ -48,7 +53,7 @@ public final class PathAPIService: Sendable {
         guard let url = components.url else { throw URLError(.badURL) }
 
         let fetchedAt = Date()
-        let (data, _) = try await URLSession.shared.data(from: url)
+        let (data, _) = try await session.data(from: url)
         let response = try JSONDecoder().decode(RidePathResponse.self, from: data)
 
         var result: [String: [Direction: [TrainArrival]]] = [:]

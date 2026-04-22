@@ -3,16 +3,18 @@ import Foundation
 public final class PinnedRoutesStore: ObservableObject {
     public static let shared = PinnedRoutesStore()
 
-    private let appGroupID = "group.com.pathtime.shared"
     private let storageKey = "pinnedRoutes_v1"
-
-    private var userDefaults: UserDefaults {
-        UserDefaults(suiteName: appGroupID) ?? .standard
-    }
+    private let userDefaults: UserDefaults
 
     @Published public var routes: [PinnedRoute] = []
 
     private init() {
+        self.userDefaults = UserDefaults(suiteName: "group.com.pathtime.shared") ?? .standard
+        load()
+    }
+
+    init(userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
         load()
     }
 

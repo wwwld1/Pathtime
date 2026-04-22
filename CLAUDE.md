@@ -13,6 +13,7 @@ PathTimeWatch/              watchOS App target (watchOS 10+)
 PathTimeWatchWidget/        watchOS Widget Extension（表盘 Complication）
 scripts/test_api.swift      API 连通性验证脚本
 SPEC.md                     需求与完成状态
+TESTING.md                  测试覆盖进度与已知 bug 记录
 ```
 
 ## 添加新文件后必须重新生成项目
@@ -91,6 +92,24 @@ Watch App
 **WidgetKit 不能放在 PathTimeShared**：`WidgetCenter` 只在 iOS 可用，Watch target 也依赖 shared package。Widget reload 逻辑放在各自的 App target 中。
 
 **新增站台**：在 `Station.swift` 枚举中添加 case，`rawValue` 必须与 API 的 `consideredStation` 字段完全一致。
+
+## 测试规范
+
+测试位于 `PathTimeShared/Tests/PathTimeSharedTests/`，仅覆盖 `PathTimeShared` 中的纯逻辑，不测试 UI。
+
+**新增功能时**：
+- `PathTimeShared` 中新增的模型方法、服务逻辑必须配套写单元测试
+- 新增测试文件后同步更新 `TESTING.md` 的状态表
+
+**新增需要外部依赖的服务时**（网络、持久化等）：
+- 通过构造器注入依赖（参考 `PathAPIService(session:)` 和 `PinnedRoutesStore(userDefaults:)`）
+- 在 `Helpers/` 中添加对应 mock
+
+**运行测试**：
+
+```bash
+cd PathTimeShared && swift test
+```
 
 ## 工作流规范
 

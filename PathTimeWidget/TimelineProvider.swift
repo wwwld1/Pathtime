@@ -40,10 +40,35 @@ struct PathTimeProvider: AppIntentTimelineProvider {
     }
 
     func timeline(for configuration: SelectRouteIntent, in context: Context) async -> Timeline<PathTimeEntry> {
-        let entry = await makeEntry(for: configuration)
-        // Refresh every 10 minutes
-        let nextRefresh = Calendar.current.date(byAdding: .minute, value: 10, to: entry.fetchedAt)!
-        return Timeline(entries: [entry], policy: .after(nextRefresh))
+        let route = resolveRoute(from: configuration)
+        let fetchedAt = Date.now
+        do {
+            let all = try await PathAPIService.shared.fetchArrivals()
+            var arrivals = all[route.station.rawValue]?[route.direction] ?? []
+            if let filter = route.targetFilter {
+                arrivals = arrivals.filter { $0.target == filter }
+            }
+            arrivals.sort { $0.arrivalDate < $1.arrivalDate }
+
+            // 每班车出发时刻生成一条 entry，系统自动切换，.timer 始终倒计未来的车
+            var entries: [PathTimeEntry] = []
+            entries.append(PathTimeEntry(date: fetchedAt, route: route, arrivals: arrivals, fetchedAt: fetchedAt))
+            for i in arrivals.indices {
+                entries.append(PathTimeEntry(
+                    date: arrivals[i].arrivalDate,
+                    route: route,
+                    arrivals: Array(arrivals.dropFirst(i + 1)),
+                    fetchedAt: fetchedAt
+                ))
+            }
+            return Timeline(entries: entries, policy: .atEnd)
+        } catch {
+            let nextRefresh = Calendar.current.date(byAdding: .minute, value: 10, to: fetchedAt)!
+            return Timeline(
+                entries: [PathTimeEntry(date: fetchedAt, route: route, arrivals: [], fetchedAt: fetchedAt)],
+                policy: .after(nextRefresh)
+            )
+        }
     }
 
     // MARK: -

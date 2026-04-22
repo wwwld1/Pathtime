@@ -45,6 +45,7 @@
 | Lock Screen（锁屏组件） | ✅ |
 | AppIntent 可配置显示哪条路线 | ✅ |
 | Widget 倒计时精度（系统级自动秒更新） | ✅ `Text(arrivalDate, style: .timer/.relative)` |
+| Widget 多条 Timeline Entry（每班车出发时自动切换，避免反向计时） | ✅ |
 
 ### 4. Apple Watch App
 

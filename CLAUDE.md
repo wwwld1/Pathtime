@@ -92,6 +92,12 @@ Watch App
 
 **新增站台**：在 `Station.swift` 枚举中添加 case，`rawValue` 必须与 API 的 `consideredStation` 字段完全一致。
 
+## 工作流规范
+
+- 每完成一个独立功能或修复后，主动提议并执行 commit，不等用户提醒
+- Commit message 用英文，格式 `type: description`
+- 多个不相关的改动拆分成多条 commit，按逻辑边界划分
+
 ## 常用命令
 
 ```bash

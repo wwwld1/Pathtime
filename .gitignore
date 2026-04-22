@@ -25,6 +25,11 @@ DerivedData/
 .swiftpm/
 *.resolved
 
+# swift test build artifacts (leaked to package root)
+PathTimeShared/*.o
+PathTimeShared/*.d
+PathTimeShared/*.swiftdeps
+
 # macOS
 .DS_Store
 .AppleDouble

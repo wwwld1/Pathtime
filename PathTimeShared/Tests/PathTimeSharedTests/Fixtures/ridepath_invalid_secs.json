@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "consideredStation": "JSQ",
+      "destinations": [
+        {
+          "label": "ToNY",
+          "messages": [
+            {
+              "target": "WTC",
+              "secondsToArrival": "abc",
+              "lineColor": "D93B26",
+              "headSign": "World Trade Center",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            },
+            {
+              "target": "33S",
+              "secondsToArrival": "120",
+              "lineColor": "4D92FB",
+              "headSign": "33rd Street",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

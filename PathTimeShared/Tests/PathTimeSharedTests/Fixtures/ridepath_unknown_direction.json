@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "consideredStation": "JSQ",
+      "destinations": [
+        {
+          "label": "ToMars",
+          "messages": [
+            {
+              "target": "MARS",
+              "secondsToArrival": "999",
+              "lineColor": "FF0000",
+              "headSign": "Mars",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "label": "ToNY",
+          "messages": [
+            {
+              "target": "WTC",
+              "secondsToArrival": "300",
+              "lineColor": "D93B26",
+              "headSign": "World Trade Center",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "consideredStation": "JSQ",
+      "destinations": [
+        {
+          "label": "ToNY",
+          "messages": [
+            {
+              "target": "WTC",
+              "secondsToArrival": "300",
+              "lineColor": "D93B26",
+              "headSign": "World Trade Center",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            },
+            {
+              "target": "33S",
+              "secondsToArrival": "120",
+              "lineColor": "4D92FB",
+              "headSign": "33rd Street",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            }
+          ]
+        },
+        {
+          "label": "ToNJ",
+          "messages": [
+            {
+              "target": "NWK",
+              "secondsToArrival": "180",
+              "lineColor": "D93B26",
+              "headSign": "Newark",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "consideredStation": "WTC",
+      "destinations": [
+        {
+          "label": "ToNJ",
+          "messages": [
+            {
+              "target": "JSQ",
+              "secondsToArrival": "600",
+              "lineColor": "D93B26",
+              "headSign": "Journal Square",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            },
+            {
+              "target": "NWK",
+              "secondsToArrival": "90",
+              "lineColor": "D93B26",
+              "headSign": "Newark",
+              "lastUpdated": "2024-01-01T00:00:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

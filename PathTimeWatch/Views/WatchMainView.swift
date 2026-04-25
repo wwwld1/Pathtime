@@ -43,7 +43,7 @@ struct WatchRouteRow: View {
     private var arrivals: [TrainArrival] { arrivalsStore.arrivals(for: route) }
 
     var body: some View {
-        TimelineView(.explicit(arrivals.map(\.arrivalDate))) { tl in
+        TimelineView(.explicit([.distantPast] + arrivals.map(\.arrivalDate))) { tl in
             let upcoming = arrivals.filter { $0.arrivalDate > tl.date }
             VStack(alignment: .leading, spacing: 4) {
                 Text(route.displayTitle)

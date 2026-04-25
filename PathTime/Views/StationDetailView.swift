@@ -57,7 +57,7 @@ struct StationDetailView: View {
                     route: PinnedRoute(station: station, direction: direction, targetFilter: target)
                 )
             }
-            TimelineView(.explicit(trains.map(\.arrivalDate))) { tl in
+            TimelineView(.explicit([.distantPast] + trains.map(\.arrivalDate))) { tl in
                 let upcoming = trains.filter { $0.arrivalDate > tl.date }.prefix(3)
                 HStack(spacing: 12) {
                     if upcoming.isEmpty {

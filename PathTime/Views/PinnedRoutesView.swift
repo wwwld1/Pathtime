@@ -65,7 +65,7 @@ struct PinnedRouteCard: View {
                 }
             }
 
-            TimelineView(.explicit(arrivals.map(\.arrivalDate))) { tl in
+            TimelineView(.explicit([.distantPast] + arrivals.map(\.arrivalDate))) { tl in
                 let upcoming = arrivals.filter { $0.arrivalDate > tl.date }.prefix(3)
                 ForEach(Array(upcoming)) { train in
                     HStack {

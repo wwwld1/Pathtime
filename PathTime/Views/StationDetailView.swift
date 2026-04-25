@@ -57,12 +57,21 @@ struct StationDetailView: View {
                     route: PinnedRoute(station: station, direction: direction, targetFilter: target)
                 )
             }
-            HStack(spacing: 12) {
-                ForEach(trains.prefix(3)) { train in
-                    Text(train.arrivalDate, style: .timer)
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .monospacedDigit()
+            TimelineView(.periodic(from: .now, by: 30)) { tl in
+                let upcoming = trains.filter { $0.arrivalDate > tl.date }.prefix(3)
+                HStack(spacing: 12) {
+                    if upcoming.isEmpty {
+                        Text("No trains")
+                            .font(.title3)
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(Array(upcoming)) { train in
+                            Text(train.arrivalDate, style: .timer)
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .monospacedDigit()
+                        }
+                    }
                 }
             }
             .padding(.leading, 18)

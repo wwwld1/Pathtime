@@ -65,19 +65,22 @@ struct PinnedRouteCard: View {
                 }
             }
 
-            ForEach(arrivals.prefix(3)) { train in
-                HStack {
-                    Circle()
-                        .fill(train.lineColor)
-                        .frame(width: 10, height: 10)
-                    Text(train.headSign)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                    Text(train.arrivalDate, style: .timer)
-                        .font(.subheadline)
-                        .fontWeight(.bold)
-                        .monospacedDigit()
+            TimelineView(.periodic(from: .now, by: 30)) { tl in
+                let upcoming = arrivals.filter { $0.arrivalDate > tl.date }.prefix(3)
+                ForEach(Array(upcoming)) { train in
+                    HStack {
+                        Circle()
+                            .fill(train.lineColor)
+                            .frame(width: 10, height: 10)
+                        Text(train.headSign)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                        Spacer()
+                        Text(train.arrivalDate, style: .timer)
+                            .font(.subheadline)
+                            .fontWeight(.bold)
+                            .monospacedDigit()
+                    }
                 }
             }
         }
